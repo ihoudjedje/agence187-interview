@@ -151,10 +151,11 @@ h4{
      font-family: 'Quicksand', sans-serif;
 }
 
-/*#search_button{
-    width: 20;
-}*/
+#search_button{
+    width: 70%;
+}
 
 #search_field{
     width: 90%;
+    
 }
