@@ -1,0 +1,47 @@
+<% include partials/header %>
+<link href="https://fonts.googleapis.com/css?family=Anton|Quicksand:300" rel="stylesheet">
+<div class="container">
+     <header class="jumbotron">
+        <div class="row">
+            <h1 id='principal_title'>Codes Postaux France</h1>
+                <div style="width: 47%; margin: 25px auto;">             
+                <p>
+                <form action="/Search" method="POST">
+                    <div class="form-group">
+                    <input class="form-control" id="search_field" type="text" placeholder="indiquez un code postal ou un nom de ville, même incomplet" name="city">
+                    <input id="search_button" type="submit" value="Chercher" class="btn btn-primary btn-large">
+                    </div>
+                    <div class="form-group">
+                        <% if(typeof(counter) != "undefined"){ %>
+                    <h4><%= counter %> Résultats trouvées</h4>
+                    <% } %>
+                    </div>
+                    
+                </form>
+                </p>
+                <p>
+                 
+            <% if(typeof(data) != "undefined"){ %>
+            <table class="table table-striped" id='table_align'>
+                <% if(counter != 0){ %>
+               <tr>
+                  <th>Ville</th><th>Code Postal</th>
+               </tr>
+               <% } %>
+            <% data.forEach(function(data){ %>
+                <tr>
+                  <td><%= data.city %></td>
+                  <td><%= data.code %></td>
+                </tr>
+            <% });} %>
+            </table>
+            
+             </p>
+             
+        </div>
+    </div>
+</div>     
+</header>
+</div>
+
+<% include partials/footer %>
