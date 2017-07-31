@@ -1,2 +1,2 @@
-# 1_project_7
-A piece of cake interview test for a Back-End intern position.
+# an interview live technical test
+A piece of cake interview live test for a Back-End intern position.
